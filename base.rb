@@ -1,4 +1,4 @@
-class base
+class Base
 	# Arrayを１つ持たせる
 	box = Array.new
 
@@ -13,7 +13,7 @@ class base
 
 	# 継承したClassはこれを呼び出す(pop)
 	def pop
-		push_proc
+		pop_proc
 	end
 	# これを子クラスでオーバーライドしないとpopから呼ばれてエラーになる
 	def pop_proc
