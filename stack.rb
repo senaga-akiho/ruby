@@ -1,8 +1,7 @@
 #base.rbをロード
 require './base'
 class Stack < Base
-	@box = []
-	
+
 	# pushメソッド
 	def push_proc
 		self.class.box.push "田中"

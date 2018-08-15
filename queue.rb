@@ -1,7 +1,6 @@
 #base.rbをロード
 require './base'
 class Ueue < Base
-	@box = []
 
 	# pushメソッド
 	def push_proc

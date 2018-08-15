@@ -1,11 +1,11 @@
 class Base
-	# Arrayを１つ持たせる
-	@box = nil
 	# 属性をうまく継承させるための〜？
 	class << self
 	  attr_accessor :box
 
 	  def inherited(klass)
+	  	# Arrayを１つ持たせる
+	  	@box = []
 	    klass.box = @box
 	  end
 	end
