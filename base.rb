@@ -1,3 +1,4 @@
+require './member'
 class Base
 	# 属性をうまく継承させるための〜？
 	class << self
@@ -11,11 +12,14 @@ class Base
 	end
 
 	# 継承したClassはこれを呼び出す(push)
-	def push
-		push_proc
+	def push(member)
+		# メンバークラスか確認，trueだったら配列にプッシュ
+		if member.instance_of?(Member)
+			push_proc(member)
+  		end
 	end
 	# これを子クラスでオーバーライドしないとpushから呼ばれてエラーになる
-	def push_proc
+	def push_proc(member)
 		raise "call abstract !"
 	end
 

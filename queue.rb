@@ -3,8 +3,8 @@ require './base'
 class Ueue < Base
 
 	# pushメソッド
-	def push_proc
-		self.class.box.push "中谷"
+	def push_proc(member)
+		self.class.box.push member
 		p self.class.box
 	end
 
