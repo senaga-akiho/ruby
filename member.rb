@@ -1,5 +1,5 @@
 class Member
-	# 初期化
+	# 手入力をさせる
 	def initialize()
 		# 名前を入力させる
 		puts "名前を入力してください"
@@ -16,13 +16,16 @@ class Member
     	puts "性別を入力させてください"
     	@gender = gets.chomp!
   	end
+
   	# 引数ありの初期化
   	def initialize(name,age,gender)
     	@name = name
     	@age = age.to_i
     	@gender = gender
   	end
+
+  	#プロパティをつなげて表示
   	def print_property
-  		puts @name + @age.to_s + @gender
+  		print @name + @age.to_s + @gender
   	end
 end
