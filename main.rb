@@ -4,6 +4,7 @@ a = Ueue.new
 b = Stack.new
 
 b.push
+b.push
 b.pop
 a.push
 a.pop

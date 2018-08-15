@@ -1,6 +1,14 @@
 class Base
 	# Arrayを１つ持たせる
-	box = Array.new
+	@box = nil
+	# 属性をうまく継承させるための〜？
+	class << self
+	  attr_accessor :box
+
+	  def inherited(klass)
+	    klass.box = @box
+	  end
+	end
 
 	# 継承したClassはこれを呼び出す(push)
 	def push
