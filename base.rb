@@ -15,12 +15,13 @@ class Base
 	def push(member)
 		# メンバークラスか確認，trueだったら配列にプッシュ
 		if member.instance_of?(Member)
-			push_proc(member)
+			# push_proc(member)
+			self.class.box.push member
+			for num in 0..self.class.box.length-1 do
+				puts "キューの中身"+(num+1).to_s+"個目"
+				puts self.class.box[num].print_property
+			end
   		end
-	end
-	# これを子クラスでオーバーライドしないとpushから呼ばれてエラーになる
-	def push_proc(member)
-		raise "call abstract !"
 	end
 
 	# 継承したClassはこれを呼び出す(pop)

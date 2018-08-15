@@ -22,4 +22,7 @@ class Member
     	@age = age.to_i
     	@gender = gender
   	end
+  	def print_property
+  		puts @name + @age.to_s + @gender
+  	end
 end

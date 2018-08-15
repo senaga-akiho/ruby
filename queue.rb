@@ -3,14 +3,20 @@ require './base'
 class Ueue < Base
 
 	# pushメソッド
-	def push_proc(member)
-		self.class.box.push member
-		p self.class.box
-	end
+	# def push_proc(member)
+		# self.class.box.push member
+		# for num in 0..self.class.box.length-1 do
+		# 	puts "キューの中身"+(num+1).to_s+"個目"
+  # 			puts self.class.box[num].print_property
+		# end
+	# end
 
 	# popメソッド
 	def pop_proc
 		self.class.box.shift
-		p self.class.box
+		for num in 0..self.class.box.length-1 do
+			puts "キューの中身"+(num+1).to_s+"個目"
+  			puts self.class.box[num].print_property
+		end
 	end
 end
